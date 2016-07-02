@@ -562,10 +562,10 @@ body {
     z-index: 2; }
   .sect-banner .v-center {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     position: relative;
     z-index: 4;
-    padding: 0 5%; }
+    padding: 1% 5%; }
     .sect-banner .v-center h1 {
       -webkit-animation: fade-in ease-in-out 2s 0.5s both;
       -moz-animation: fade-in ease-in-out 2s 0.5s both;
@@ -676,7 +676,6 @@ footer {
 /*----------------------------------------------   
 --Keyframes Slider - Sm
 -----------------------------------------------  */
-
 
 .no-cpu {
     transform: translateZ(0);
