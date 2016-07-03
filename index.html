@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>NettiPeti.com</title>
-    <meta name="description" content="A stupid little Jquery plugin by Stephen Scaff of SoSweet! Creative, that randomly changes images on reload.">
+    <meta name="description" content="Netti és Peti weboldala / Webpage for Netti & Peti">
     <meta name="author" content="Peter Nagy / Petusa">
     <meta name="keywords" content="Netti Peti, for friends and family, memories, pictures">
     <meta property="og:locale" content="en_US"/>
@@ -15,13 +15,13 @@
     <meta property="og:title" content="NettiPeti.com" />
     <meta property="og:site_name" content="Netti és Peti weboldala!" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="A stupid little Jquery plugin by Stephen Scaff that randomly changes images on reload." />
-    <meta name="twitter:title" content="" />
+    <meta property="og:description" content="Netti és Peti weboldala / Webpage for Netti & Peti" />
+    <meta name="twitter:title" content="NettiPeti.com" />
     <meta name="twitter:url" content="http://www.sosweetcreative.com/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="@stephenscaff">
-    <meta name="twitter:site" content="@stephenscaff">
-    <meta name="twitter:description" content="ChickenDinner is a stupid little Jquery plugin by Stephen Scaff that will randomly load images from a client-side array">
+    <meta name="twitter:creator" content="@netti_peti">
+    <meta name="twitter:site" content="@netti_peti">
+    <meta name="twitter:description" content="Netti és Peti weboldala / Webpage for Netti & Peti">
     <meta name="robots" content="index,follow"/>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
@@ -32,46 +32,58 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="css/images.css">-->
-    <link rel="stylesheet" href="https://tonicdev.io/petusa/5775925344e496130040a8c5/branches/master"> 
+    <link rel="stylesheet" href="https://tonicdev.io/petusa/5775925344e496130040a8c5/branches/master">
+    <!-- Teletext.io -->
+    <script src="https://teletext.io/js/latest/txt-min.js"></script>
+    <script>
+        var ls = ["en-EN", "hu-HU"], cl=0;
+        var o = { id: "1eee53ae-739f-412c-82ed-e7473f14b52e", locale: ls[cl] };
+        Txt.render(o);
+    </script> 
 </head>
 <body>
     <!-- Section: Full screen cover -->	
     <section class="sect-banner no-cpu">
-        <!-- Slider animation -->
-        <ul class="kf-slider">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <!-- Slider animation, 4 pics for now -->
+        <ul class="kf-slider"><li></li><li></li><li></li><li></li></ul>
         <div class="v-center">
-            <h1>Szeretteinknek & barátainknak</h1>
+            <h1 data-txt="homepage.hero-slogan"></h1>
             <p>NettiPeti.com</p>	
         </div>
     </section>
     <!-- Content -->
-    <div>Hello Bello!!</div>
     <!-- Footer -->	
     <footer>
         <div style="padding-left:5%;padding-right:5%;">
             <div class="row" style="padding:5px;">
                 <div class="col-md-offset-4 col-md-4">
-                    <a class="btn btn-block btn-social btn-facebook btn-lg" style="text-align:center;" href="https://www.facebook.com/groups/1058059990936803/" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
-                        <span class="fa fa-facebook"></span> Csatlakozz a csoportba
+                    <a class="btn btn-block btn-social btn-facebook btn-lg" 
+                        style="text-align:center;" 
+                        href="https://www.facebook.com/groups/nettipeti/" 
+                        target="_blank" 
+                        onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);"
+                        data-txt="social-connect-fb">
+                        <span class="fa fa-facebook"></span><div data-txt="homepage.social-fb"></div>
                     </a>
                 </div>
             </div>
             <div class="row" style="padding:5px;">
                 <div class="col-md-offset-4 col-md-4">
-                    <a class="btn btn-block btn-social btn-twitter btn-lg" style="text-align:center;" href="https://twitter.com/netti_peti" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);">
-                        <span class="fa fa-twitter"></span> Kövess minket
+                    <a class="btn btn-block btn-social btn-twitter btn-lg" 
+                        style="text-align:center;" 
+                        href="https://twitter.com/netti_peti" 
+                        target="_blank" 
+                        onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);"
+                        data-txt="social-connect-twitter">
+                        <span class="fa fa-twitter"></span><div data-txt="homepage.social-twitter"></div>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="social-buttons">
-                <p>Az oldalt szívvel&lélekkel készíti <a href="http://github.com/petusa" style="color:white;" target="_blank">Petusa</a></p>
+                <p><span><a href="javascript:void(9)" style="color:white;" onclick="o.locale=ls[++cl%ls.length];Txt.refresh(o);this.blur();return false;" data-txt="homepage.switch-language"></a></span> 
+                    | <span data-txt="homepage.footer-note"> <a href="http://github.com/petusa" style="color:white;" target="_blank">Petusa</a></span></p>
             </div>
         </div>
     </footer>
